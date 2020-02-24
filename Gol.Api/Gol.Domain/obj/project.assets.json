@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj",
       "projectName": "Gol.Domain",
-      "projectPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj",
+      "projectPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj",
       "packagesPath": "C:\\Users\\Michel-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

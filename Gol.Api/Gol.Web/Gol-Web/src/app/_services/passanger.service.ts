@@ -2,13 +2,14 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Passanger } from '../_models/Passanger';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PassangerService {
 
-  baseUrl: string = "http://localhost:2357/passanger";
+  baseUrl: string = `${environment.ApiUrl}/passanger`;
 
   constructor(private http: HttpClient) {}
 

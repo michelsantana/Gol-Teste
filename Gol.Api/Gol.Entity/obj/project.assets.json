@@ -1168,11 +1168,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Entity\\Gol.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Entity\\Gol.Entity.csproj",
       "projectName": "Gol.Entity",
-      "projectPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Entity\\Gol.Entity.csproj",
+      "projectPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Entity\\Gol.Entity.csproj",
       "packagesPath": "C:\\Users\\Michel-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Entity\\obj\\",
+      "outputPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1192,8 +1192,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj": {
-              "projectPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj"
+            "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj": {
+              "projectPath": "C:\\Users\\Michel-PC\\Source\\Repos\\Gol-Teste\\Gol.Api\\Gol.Domain\\Gol.Domain.csproj"
             }
           }
         }
