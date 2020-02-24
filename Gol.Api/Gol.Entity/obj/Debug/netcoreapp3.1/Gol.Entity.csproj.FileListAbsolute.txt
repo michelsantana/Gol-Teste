@@ -1,0 +1,13 @@
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\bin\Debug\netcoreapp3.1\Gol.Entity.deps.json
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\bin\Debug\netcoreapp3.1\Gol.Entity.dll
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\obj\Debug\netcoreapp3.1\Gol.Entity.csprojAssemblyReference.cache
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\obj\Debug\netcoreapp3.1\Gol.Entity.AssemblyInfoInputs.cache
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\obj\Debug\netcoreapp3.1\Gol.Entity.AssemblyInfo.cs
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\bin\Debug\netcoreapp3.1\Gol.Entity.pdb
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\bin\Debug\netcoreapp3.1\Gol.Domain.dll
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\bin\Debug\netcoreapp3.1\Gol.Domain.pdb
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\obj\Debug\netcoreapp3.1\Gol.Entity.csproj.CopyComplete
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\obj\Debug\netcoreapp3.1\Gol.Entity.dll
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\obj\Debug\netcoreapp3.1\Gol.Entity.pdb
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\bin\Debug\netcoreapp3.1\Gol.Entity.runtimeconfig.json
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Entity\bin\Debug\netcoreapp3.1\Gol.Entity.runtimeconfig.dev.json

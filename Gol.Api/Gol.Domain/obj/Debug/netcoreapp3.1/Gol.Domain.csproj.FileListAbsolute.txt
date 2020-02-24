@@ -1,0 +1,8 @@
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\bin\Debug\netcoreapp3.1\Gol.Domain.deps.json
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\bin\Debug\netcoreapp3.1\Gol.Domain.dll
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\bin\Debug\netcoreapp3.1\Gol.Domain.pdb
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\obj\Debug\netcoreapp3.1\Gol.Domain.csprojAssemblyReference.cache
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\obj\Debug\netcoreapp3.1\Gol.Domain.AssemblyInfoInputs.cache
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\obj\Debug\netcoreapp3.1\Gol.Domain.AssemblyInfo.cs
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\obj\Debug\netcoreapp3.1\Gol.Domain.dll
+C:\Users\Michel-PC\Source\Repos\Gol.Api\Gol.Domain\obj\Debug\netcoreapp3.1\Gol.Domain.pdb
