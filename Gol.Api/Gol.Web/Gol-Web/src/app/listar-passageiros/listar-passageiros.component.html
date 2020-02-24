@@ -1,0 +1,261 @@
+<div class="d-flex mt-2">
+  <div class="form-inline mr-auto">
+    <div class="form-group mb-2">
+      <input
+        type="text"
+        class="form-control mr-2"
+        placeholder="Buscar"
+        [(ngModel)]="filtroLista"
+      />
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-justify btn-outline-info" (click)="pesquisar(filtroLista)">
+      <i class="fa fa-search"></i>&nbsp;Buscar
+    </button>
+    <button
+      class="btn btn-justify btn-outline-info"
+      (click)="openModal(template, 0)"
+    >
+      <i class="fa fa-plus"></i>&nbsp;Cadastrar novo
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h5>{{ filtroLista }}</h5>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Passageiro</th>
+          <th>Documento</th>
+          <th>Avião</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of passageiros">
+          <td>{{ a.id }}</td>
+          <td>{{ a.nome | uppercase }}</td>
+          <td>{{ a.documento }}</td>
+          <td>{{ aeronavesModelos[a.airplaneId] }}</td>
+          <td>
+            <div class="btn-group">
+              <button
+                class="btn btn-sm btn-success"
+                (click)="openModal(template, a.id)"
+                tooltip="Editar"
+              >
+                <i class="fa fa-edit"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-danger"
+                (click)="deletar(template, a.id)"
+                tooltip="Excluir"
+              >
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr *ngIf="flErro == true" colspan="5" class="text-center">
+          <td colspan="5" class="text-center">
+            Api com erro
+          </td>
+        </tr>
+        <tr *ngIf="flErro == false" colspan="5" class="text-center">
+          <td colspan="5" class="text-center">
+            Api com sucesso
+          </td>
+        </tr>
+        <tr>
+          <td *ngIf="passageiros.length == 0" colspan="5" class="text-center">
+            Nenhum avião encontrado
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<div
+  bsModal
+  #template="bs-modal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dialog-sizes-name1"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-sizes-name1" class="modal-title pull-left">
+          <div *ngIf="modoEdicao">Editar aeronave</div>
+          <div *ngIf="!modoEdicao">Incluir aeronave</div>
+        </h4>
+        <button
+          type="button"
+          class="close pull-right"
+          (click)="template.hide()"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="registerForm">
+          <div class="form-row d-none">
+            <div class="form-group col-md-12">
+              <label>Id</label>
+              <input
+                type="text"
+                class="form-control"
+                disabled
+                [ngClass]="{
+                  'is-invalid':
+                    registerForm.get('id').errors &&
+                    registerForm.get('id').touched
+                }"
+                formControlName="id"
+              />
+              <div class="invalid-feedback">Campo obrigatório</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label>Nome</label>
+              <input
+                type="text"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    registerForm.get('nome').errors &&
+                    registerForm.get('nome').touched
+                }"
+                formControlName="nome"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  registerForm.get('nome').hasError('required') &&
+                  registerForm.get('nome').touched
+                "
+              >
+                Campo obrigatório
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  registerForm.get('nome').hasError('minlength') &&
+                  registerForm.get('nome').touched
+                "
+              >
+                Campo deve ter no mínimo 3 caracteres
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  registerForm.get('nome').hasError('maxlength') &&
+                  registerForm.get('nome').touched
+                "
+              >
+                Campo deve ter no máximo 50 caracteres
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Documento</label>
+              <input
+                type="text"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    registerForm.get('documento').errors &&
+                    registerForm.get('documento').touched
+                }"
+                formControlName="documento"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  registerForm.get('documento').hasError('required') &&
+                  registerForm.get('documento').touched
+                "
+              >
+                Campo obrigatório
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  registerForm.get('documento').hasError('minlength') &&
+                  registerForm.get('documento').touched
+                "
+              >
+                Campo deve ter no mínimo 3 caracteres
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  registerForm.get('documento').hasError('maxlength') &&
+                  registerForm.get('documento').touched
+                "
+              >
+                Campo deve ter no máximo 50 caracteres
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label>Avião</label>
+              <select
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    registerForm.get('airplaneId').errors &&
+                    registerForm.get('airplaneId').touched
+                }"
+                formControlName="airplaneId"
+              >
+                <option *ngFor="let a of aeronaves" value="{{ a.id }}">{{
+                  a.modelo
+                }}</option>
+              </select>
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  registerForm.get('airplaneId').hasError('required') &&
+                  registerForm.get('airplaneId').touched
+                "
+              >
+                Campo obrigatório
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="template.hide()">
+          Fechar
+        </button>
+        <button
+          class="btn btn-primary ml-auto"
+          [disabled]="registerForm.invalid"
+          (click)="salvarAlteracao(template)"
+        >
+          Salvar Alterações
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<br />
+<!-- <p>{{registerForm.value | json}}</p>
+<p>{{registerForm.status | json}}</p> -->
